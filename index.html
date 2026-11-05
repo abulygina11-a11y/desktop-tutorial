@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header>
+        <div class="container header-block">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#8b5cf6"/>
+                    <path d="M8 22L14 14L19 20L22 17L26 22H8Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="22" cy="11" r="2" fill="white"/>
+                </svg>
+                <span>Фотогалерея</span>
+            </a>
+            <nav class="header-nav">
+                <a href="#" id="btn-open-register">Регистрация</a>
+                <a href="#" id="btn-open-login">Вход</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main>
+        <div class="container">
+            <div class="main-top">
+                <h1>Июль, 2022</h1>
+                <button class="btn-add">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Добавить фото
+                </button>
+            </div>
+
+            <!-- СЕТКА КАРТОЧЕК (12 штук, 4 в ряд) -->
+            <div class="gallery-grid">
+                <!-- Ряд 1 -->
+                <a href="#" class="card">
+                    <img src="photo1.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>July, Summer butterflies.</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo2.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Summer butterflies.</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo3.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Cape Point peninsula...</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo4.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Antelope Canyon</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                
+                <!-- Ряд 2 -->
+                <a href="#" class="card">
+                    <img src="photo5.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Waves crashing in Brittany...</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo6.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>After the rain</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo7.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Milkyway trail over death valley</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo8.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Nature</h3><p>Добавлено 15 августа</p></div>
+                </a>
+
+                <!-- Ряд 3 -->
+                <a href="#" class="card">
+                    <img src="photo9.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>July, Summer butterflies.</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo10.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>Wheat period.</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo11.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>A baby jumping spider on...</h3><p>Добавлено 15 августа</p></div>
+                </a>
+                <a href="#" class="card">
+                    <img src="photo12.jpg.png" alt="Фото">
+                    <div class="card-info"><h3>July, Summer butterflies.</h3><p>Добавлено 15 августа</p></div>
+                </a>
+            </div>
+
+            <!-- Кнопка "Показать еще" на всю ширину -->
+            <button class="btn-load-more">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                Показать еще
+            </button>
+        </div>
+    </main>
+
+        <!-- ПОДВАЛ -->
+    <footer>
+        <div class="container footer-content">
+            <a href="mailto:info@gmail.com" class="footer-email">info@gmail.com</a>
+            <span class="footer-dev">Информация о разработчике</span>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="btn-close">&times;</button>
+            
+            <div class="modal-tabs">
+                <span class="tab active" id="tab-reg">Регистрация</span>
+                <span class="tab" id="tab-login">Авторизация</span>
+            </div>
+
+            <!-- ФОРМА РЕГИСТРАЦИИ -->
+            <form id="form-register" class="auth-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Ваше имя" class="full-width" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Мобильный телефон" required>
+                </div>
+                <div class="form-row">
+                    <input type="password" placeholder="Пароль" required>
+                    <input type="password" placeholder="Повторите пароль" required>
+                </div>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agree-checkbox" required>
+                    <span>Согласен на обработку <a href="#">персональный данных</a></span>
+                </label>
+                
+                <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                <p class="form-note">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Все поля обязательны для заполнения
+                </p>
+            </form>
+
+            <!-- ФОРМА АВТОРИЗАЦИИ -->
+            <form id="form-login" class="auth-form" style="display: none;">
+                <div class="form-row">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Войти</button>
+                <p class="form-note">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Все поля обязательны для заполнения
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
